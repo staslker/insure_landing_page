@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+
+//---colors---//
+$DarkViolet: hsl(256, 26%, 20%);
+$GrayishBlue: hsl(216, 30%, 68%);
+
+$VeryDarkViolet: hsl(270, 9%, 17%);
+$DarkGrayishViolet: hsl(273, 4%, 51%);
+$VeryLightGray: hsl(0, 0%, 98%);
+
+//--fonts--//
+$DM: 'DM Serif Display', serif;
+$Karla: 'Karla', sans-serif;
+
+body{
+     color: $DarkViolet;
+     font-family: $Karla, sans-serif;
+     margin: 0;
+     box-sizing: border-box;
+     font-size: 16px;
+        
+}
+
+h1,h2,h3{
+     font-family: $DM, sans-serif;
+}
+
+     h1 {
+          font-size: 3em;
+          letter-spacing: 2px;
+          line-height: 1;
+          position: relative;
+          margin: 0;
+          padding-top: 40px;
+
+     &::before{
+               content: '';
+               background-color: #fff;
+               height: 1px;
+               width: 150px;
+               position: absolute;
+               top: 0;left: 0;
+               
+          }
+
+ }
+
+     h2 {
+          font-size: 2.8em;
+          letter-spacing: 2px;
+          line-height: 1;
+          position: relative;
+          margin: 0;
+          padding-top: 50px;
+
+          &.has-line-up{
+               margin-bottom: 100px;
+          }
+     }
+
+     h3 {
+          font-size: 1.6em;
+     }
+
+     p {
+          opacity: 0.8;
+     }
+
+     .has-line-up::before{
+          content: '';
+          background-color: $DarkViolet;
+          height: 1px;
+          width: 150px;
+          position: absolute;
+          top: 0;left: 0;
+          
+     }
+
+.btn {
+     background-color: transparent;
+     border: 2px solid #fff;
+     padding: 10px 30px;
+     color: #fff;  
+     text-transform: uppercase;
+     letter-spacing: 1.5px;
+     cursor: pointer;
+     z-index: 3;
+     display: inline-block;
+}
+
+.btn-reverce {
+     border: 2px solid $DarkViolet;
+     color:$DarkViolet;
+      cursor: pointer;
+      z-index: 3;
+}
+
+.container {
+     padding:  15px;
+     margin: 0 auto;
+     max-width: 100%;
+     max-width: 1200px;
+
+     .flex {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+     }
+     
+     .flex > div {
+          flex:1;
+     }
+
+     .align-start {
+          display: flex;
+          align-items: flex-start;
+          }
+     }
+
+      .main-content{
+           position: relative;
+
+           p{
+                width: 85%;
+           }
+      }
+
+      .bg-violet {
+           display: flex;
+           max-width: 1110px;
+           background-color: $DarkViolet;
+           padding: 60px;
+           position: relative;
+           margin: 100px auto;
+          background-image: url('./images/bg-pattern-how-we-work-desktop.svg');
+          background-repeat: no-repeat;
+          background-position: top right;
+          background-size: 35% 140%;
+
+           h2{
+                color: #fff;
+                padding: 0;
+                width: 75%;
+                
+           }
+
+     
+}
+
+.main-image{
+          margin-bottom: -200px;
+          max-width: 100%;
+}
+
+nav {
+     .hamburger {
+          display: none;
+     }
+
+     img {
+         padding-left: 18px;
+    }
+     
+    ul {
+          display: flex;
+          list-style-type:none;
+          align-items: center;
+           
+
+           
+
+
+          li {
+               margin-left: 25px;
+
+               a {
+                    font-weight:bold;
+                    font-size: 0.9em;
+                    color:$DarkViolet;
+                    text-decoration: none;
+                    letter-spacing: 3;
+                    text-transform: uppercase;
+                    
+               }     
+          }   
+     }
+}
+
+
+header{
+     background-color: $DarkViolet;
+     color: #fff;
+     padding: 50px 0;
+     position: relative;
+     margin-bottom: 120px;
+    
+
+     &::before{    
+          content: '';
+          background-image: url('./images/bg-pattern-intro-left-desktop.svg');
+          background-repeat: no-repeat;
+          background-position:bottom left;
+          position: absolute;
+          bottom: -60%;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+     }
+     &::after{
+          content: '';
+          background-image: url('./images/bg-pattern-intro-right-desktop.svg');
+          background-repeat: no-repeat;
+          background-position: top right;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+     }
+
+     & * {
+          z-index: 1;
+     }
+}
+
+footer {
+     background-color: $VeryLightGray;
+     padding: 30px 0;
+     position: relative;
+     background-image: url('./images/bg-pattern-footer-desktop.svg');
+     background-repeat: no-repeat;
+     background-position:top left;
+   
+
+
+     h4 {
+          color: $DarkGrayishViolet;
+          text-transform: uppercase;
+     }
+
+     ul {
+          list-style: none;
+          padding: 0;
+         
+          
+          li {
+               margin-bottom: 10px;
+             
+          }
+
+           li:not(:first-child) {
+               margin-left: 0px;          
+          }
+
+          .soc_image{
+               margin-left: 15px;          
+          }
+
+          a {
+               text-decoration: none;
+               text-transform: uppercase;
+               color: $DarkViolet;      
+          }
+     }
+
+     .border-bottom {
+          border-bottom: 0.5px solid $GrayishBlue;
+          margin-bottom: 30px;
+     }
+
+    
+}
+
+//---------media----------------------------------//
+
+
+@media screen and(max-width:768px){
+ .body, h1, h2{
+          text-align: center;
+     }
+
+              nav ul.show {
+                background-color: $VeryDarkViolet;
+               display: flex;
+               flex-direction: column;
+               position: fixed;
+               top: 70px;
+               left: 0;
+               width: 100vw;
+               height: calc(100vh - 70px);
+               color: #fff;
+               z-index: 10;
+               margin: 0;
+               display: flex;
+               padding-top: 30px;
+               
+               
+     }
+
+        nav .hamburger .close {
+          display: none;
+          cursor: pointer;
+     }
+
+     nav .hamburger.show .open {
+          display: none;
+          cursor: pointer;
+     }
+
+       nav .hamburger.show .close {
+          display: block;
+          cursor: pointer;
+     }
+ 
+
+
+     .flex{
+          flex-direction: column;
+     }
+
+
+     nav {
+          
+          
+
+          .hamburger {
+               display: flex;
+               background-color: transparent;
+               border: 0;
+               cursor: pointer;
+               z-index: 100;
+          }
+
+          .hamburger::focus {
+               outline: none;
+          }
+
+          .flex {
+               flex-direction: row;
+               justify-content: space-between;
+               align-items: center;
+          }
+          
+          ul {
+               display: none;
+
+               li {
+                    margin: 20px 0;
+                    display: flex;
+                    justify-content: center;
+                    cursor: pointer;
+               }
+               li a {
+                    z-index: 10;
+                    color: #fff; 
+               padding-right: 70px;
+               cursor: pointer;
+               }
+          }
+
+          .btn-reverce {
+               border-color: #fff;
+               color: #fff;
+               margin-right: 70px;
+               cursor: pointer;
+          }
+          
+
+     }
+
+
+
+
+
+     header::before{
+          bottom: 10%;
+          left: 0;
+
+     }
+      header::after{
+            background-image: url('./images/bg-pattern-intro-right-mobile.svg');
+          top: 230px;
+          right: 0;
+          background-position: bottom right;
+          width: 100%;
+          height: 100%;
+     }
+
+     // .main-content {
+     //      margin-top: -150px;
+     // }
+
+      .main-image{
+           display: flex;
+          margin-top: -65px;
+          display: inline-block;
+          margin-bottom: 0;
+          width:100vh;
+          background-size: cover;
+          height: 100%;
+               
+     }
+
+     .reverce-mobile {
+          flex-direction: column-reverse;
+          margin-bottom: 0px;
+
+          .main-text-button{
+               padding: 0 60px ;
+               display: block;
+               margin-left: auto;
+               margin-right: auto;
+
+               p{
+                    text-align: center;
+               }
+          }
+
+          .btn {
+               display: block;
+               margin-left: auto;
+               margin-right: auto;
+          }
+        
+     }
+
+     
+
+      .has-line-up::before{
+          left: 50%;
+          transform: translateX(-50%);          
+     }
+
+     .align-start {
+          display: flex;
+          align-items: center;          
+     }
+  
+     h1::before{
+               display: none;
+     }
+
+     
+
+
+     footer {
+          background-image: url('./images/bg-pattern-footer-mobile.svg');
+          background-size: 75% auto;
+          background-position: top left;
+          display: flex;
+
+          .container {
+               margin-top: 90px;
+          }
+         
+          .social {
+               flex-direction: row;   
+          }
+
+          .border-bottom {
+               width: 500px;
+          }
+
+          .footer_info {
+               text-align: center;
+               display: flex; 
+                    
+          }
+          .footer_info div {
+               width: 100%;  
+          } 
+          
+     }  
+
+     .bg-violet {
+          background-image: url('./images/bg-pattern-how-we-work-mobile.svg');
+          background-repeat: no-repeat;
+          background-position: top right;
+          background-size: 35% 140%;
+          margin: 0 30px 180px;
+          
+
+          h2 {
+               display: flex;
+               justify-content: center;
+               width: 100%;
+               margin-bottom: 30px;
+               
+          }  
+     }
+
+     .main-block {
+          text-align: center;
+
+          h3 {
+               font-size: 2.3em;
+          }
+
+          div {
+               width: 90%;
+          }
+         
+          p {
+               display: flex;
+               width: 100%;
+               margin-bottom: 40px;
+               font-size: 1.5em;
+               color: $DarkGrayishViolet;
+      
+          }
+     }
+
+
+    
+
+}
+
+
+
